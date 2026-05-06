@@ -7,6 +7,6 @@ for i in range(0, 10):
         if j > i:
             if not first:
                 print(", ", end="")
-            print(f"{i}{j}", end="")
+            print("{}{}".format(i, j), end="")
             first = False
 print()
