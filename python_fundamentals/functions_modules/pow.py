@@ -6,7 +6,7 @@ def pow(a, b):
     if b < 0:
         for i in range(-b):
             result /= a
-            return result
-    for i in range(b):
-        result *= a
+    else:
+        for i in range(b):
+            result *= a
     return result
