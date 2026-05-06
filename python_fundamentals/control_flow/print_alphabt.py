@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 
-for c in "abcdefghijklmnopqrstuvwxyz":
-    if c not in 'eq':
-        print(c, end="")
-print()
+for i in range(ord('a'), ord('z') + 1):
+    if i != ord('e') and i != ord('q'):
+        print("{:c}".format(i), end="")
