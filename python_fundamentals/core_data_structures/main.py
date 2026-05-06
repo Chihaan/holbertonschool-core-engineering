@@ -7,6 +7,7 @@ print_matrix_integer = __import__('print_matrix_integer').print_matrix_integer
 add_tuple = __import__('add_tuple').add_tuple
 common_elements = __import__('common_elements').common_elements
 update_dictionary = __import__('update_dictionary').update_dictionary
+best_score = __import__('best_score').best_score
 
 my_list = ["a", "b", "c", "d", "e"]
 
@@ -70,3 +71,16 @@ print()
 d = {'language': 'C', 'number': 89, 'track': 'Low level'}
 print(update_dictionary(d, 'language', 'Python'))
 print(update_dictionary(d, 'city', 'San Francisco'))
+
+
+
+print()
+print("Ex:7")
+print()
+
+
+
+
+scores = {'John': 12, 'Bob': 14, 'Mike': 15, 'Molly': 16, 'Adam': 10}
+print(best_score(scores))
+print(best_score(None))
