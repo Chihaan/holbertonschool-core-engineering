@@ -2,8 +2,8 @@
 
 
 for i in range(0, 100):
-    if i != 0:
-        print(", {:02d}".format(i), end="")
+    if i < 99:
+        print("{:02d}, ".format(i), end="")
     else:
-        print("{:02d}".format(i), end="")
-print()
+        print("{:02d}".format(i))
+
