@@ -5,6 +5,7 @@ element_at = __import__('element_at').element_at
 replace_in_list = __import__('replace_in_list').replace_in_list
 print_matrix_integer = __import__('print_matrix_integer').print_matrix_integer
 add_tuple = __import__('add_tuple').add_tuple
+common_elements = __import__('common_elements').common_elements
 
 my_list = ["a", "b", "c", "d", "e"]
 
@@ -48,3 +49,14 @@ print(add_tuple((1, 89), (88, 11)))
 print(add_tuple((1, 89), (1, )))
 print(add_tuple((1, 89), ()))
 print(add_tuple((), ()))
+
+
+print()
+print("Ex:5")
+print()
+
+
+
+set_1 = {"Python", "C", "Javascript"}
+set_2 = {"Bash", "C", "Ruby", "Perl"}
+print(sorted(list(common_elements(set_1, set_2))))
