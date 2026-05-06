@@ -6,6 +6,7 @@ replace_in_list = __import__('replace_in_list').replace_in_list
 print_matrix_integer = __import__('print_matrix_integer').print_matrix_integer
 add_tuple = __import__('add_tuple').add_tuple
 common_elements = __import__('common_elements').common_elements
+update_dictionary = __import__('update_dictionary').update_dictionary
 
 my_list = ["a", "b", "c", "d", "e"]
 
@@ -60,3 +61,12 @@ print()
 set_1 = {"Python", "C", "Javascript"}
 set_2 = {"Bash", "C", "Ruby", "Perl"}
 print(sorted(list(common_elements(set_1, set_2))))
+
+print()
+print("Ex:6")
+print()
+
+
+d = {'language': 'C', 'number': 89, 'track': 'Low level'}
+print(update_dictionary(d, 'language', 'Python'))
+print(update_dictionary(d, 'city', 'San Francisco'))
