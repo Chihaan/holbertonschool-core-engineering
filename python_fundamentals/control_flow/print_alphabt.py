@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
 
 
-print("abcdfghijklmnoprstuvwxyz")
+for c in "abcdefghijklmnopqrstuvwxyz":
+    if c not in 'eq':
+        print(c, end="")
+print()
