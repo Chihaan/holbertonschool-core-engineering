@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 element_at = __import__('element_at').element_at
 replace_in_list = __import__('replace_in_list').replace_in_list
+print_matrix_integer = __import__('print_matrix_integer').print_matrix_integer
 
 my_list = ["a", "b", "c", "d", "e"]
 
@@ -24,3 +25,14 @@ print()
 my_list = [1, 2, 3, 4, 5]
 print(replace_in_list(my_list, 3, 99))
 print(replace_in_list(my_list, 15, 99))
+
+print()
+print("Ex:3")
+print()
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print_matrix_integer(matrix)
