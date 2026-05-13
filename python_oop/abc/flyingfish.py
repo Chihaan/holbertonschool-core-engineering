@@ -1,4 +1,12 @@
-#!/usr/bin/env python3
+
+"""
+Module illustrant l'héritage multiple avec la classe FlyingFish.
+
+Ce module définit les classes Fish, Bird et FlyingFish pour montrer comment un poisson volant
+peut hériter de comportements de plusieurs classes.
+"""
+
+# ...existing code...
 
 
 
