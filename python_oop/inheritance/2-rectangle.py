@@ -15,7 +15,7 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """Retourne l'aire."""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def __str__(self):
         """Affiche le rectangle."""
