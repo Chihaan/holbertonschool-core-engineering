@@ -3,6 +3,7 @@
 
 Rectangle = __import__('1-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """Carré basé sur Rectangle."""
     def __init__(self, size):
