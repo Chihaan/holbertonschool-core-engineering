@@ -2,7 +2,7 @@
 
 
 class Square:
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         self.size = size
 
     def area(self):
@@ -11,7 +11,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -24,7 +24,7 @@ class Square:
         if self.size == 0:
             print()
             return
-        for h in range(self.size):
-            for l in range(self.size):
+        for height in range(self.size):
+            for length in range(self.size):
                 print("#", end="")
             print()

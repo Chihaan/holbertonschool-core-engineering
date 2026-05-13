@@ -2,7 +2,7 @@
 
 
 class Square:
-    def __init__(self, size = 0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
@@ -16,7 +16,7 @@ class Square:
             return result
         for i in range(self.position[1]):
             result += "\n"
-        for l in range(self.size):
+        for length in range(self.size):
             result += " " * self.position[0] + "#" * self.size + "\n"
         result = result.rstrip("\n")
         return result
@@ -24,7 +24,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -40,13 +40,13 @@ class Square:
             return
         for i in range(self.position[1]):
             print()
-        for l in range(self.size):
-            print(" " * self.position[0] + "#" * self.size) 
+        for length in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
 
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         if (
