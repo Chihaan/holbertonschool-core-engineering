@@ -8,6 +8,6 @@ class Square(Rectangle):
     """Carré basé sur Rectangle."""
     def __init__(self, size):
         """Init avec size."""
+        self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
-        self.integer_validator("size", size)
