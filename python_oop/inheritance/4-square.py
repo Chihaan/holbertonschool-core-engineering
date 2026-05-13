@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Square avec str, hérite de Rectangle."""
 
-Rectangle = __import__('1-rectangle').Rectangle
+BaseGeometry = __import__('base_geometry').BaseGeometry
 
 
 class Square(Rectangle):
