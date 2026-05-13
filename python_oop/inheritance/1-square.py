@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Square hérite de Rectangle."""
 
-BaseGeometry = __import__('base_geometry').BaseGeometry
+Rectangle = __import__('2-rectangle').Rectangle
 
 
 class Square(Rectangle):
