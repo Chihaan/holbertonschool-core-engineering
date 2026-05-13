@@ -1,3 +1,5 @@
+
+"""BaseGeometry abstraite."""
 #!/usr/bin/env python3
 
 
