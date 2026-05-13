@@ -2,13 +2,17 @@
 """
 Module pour la classe Square.
 
-Ce module définit la classe Square qui permet de gérer la taille et la position d'un carré,
-de calculer son aire, de l'afficher et de le convertir en chaîne de caractères.
+Ce module définit la classe Square qui permet de gérer
+la taille et la position d'un carré,
+de calculer son aire, de l'afficher et de le convertir en
+chaîne de caractères.
 """
 
 
 class Square:
-    """Classe représentant un carré avec gestion de la taille et de la position."""
+    """Classe représentant un carré avec
+    gestion de la taille et de la position.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialise un carré avec une taille et une position données.
@@ -60,7 +64,9 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """Affiche le carré avec le caractère # en tenant compte de la position."""
+        """Affiche le carré avec le caractère #
+        en tenant compte de la position.
+        """
         result = ""
         if self.size == 0:
             print()
