@@ -14,6 +14,7 @@ async def connection_handler(websocket):
     finally:
         connected.remove(websocket)
 
+
 async def main():
     async with websockets.serv(connection_handler, "localhost", 8765):
         await asyncio.Future()
