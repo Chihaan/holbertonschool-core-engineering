@@ -4,17 +4,19 @@ import asyncio
 import websockets
 
 
+connected = set()
+
 async def connection_handler(websocket):
-    connected = set()
+    connected.add(websocket)
     try:
         async for message in websocket:
-            await websocket.send("U:", message)
+            await websocket.send("U:" + message)
     finally:
         connected.remove(websocket)
 
 
 async def main():
-    async with websockets.serv(connection_handler, "localhost", 8765):
+    async with websockets.serve(connection_handler, "localhost", 8765):
         await asyncio.Future()
 
 
