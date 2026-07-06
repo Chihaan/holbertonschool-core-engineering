@@ -11,9 +11,10 @@ async def connection_handler(websocket):
     connected.add(websocket)
     try:
         async for message in websocket:
-            await websocket.send("U:" + message)
+            for client in connected.copy():
+                await client.send("B:" + message)
     finally:
-        connected.remove(websocket)
+        connected.discard(websocket)
 
 
 async def main():
