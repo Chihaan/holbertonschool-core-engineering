@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import asyncio
-import websockets
-import os
+import asyncio, websockets, os, sys
 
 
 async def connect_and_send(uri, message):
@@ -15,5 +13,8 @@ async def connect_and_send(uri, message):
 
 if __name__ == "__main__":
     uri = os.environ.get("WS_URI", "ws://localhost:8765")
-    msg = os.environ.get("WS_message", "Hello WebSocket")
-    asyncio.run(connect_and_send(uri, msg))
+    if len(sys.argv) > 1:
+        message = sys.argv[1]
+    else:
+        message = "Hello WebSocket"
+    asyncio.run(connect_and_send(uri, message))
