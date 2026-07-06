@@ -16,5 +16,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         message = sys.argv[1]
     else:
-        message = "Hello WebSocket"
+        message = os.environ.get("WS_MSG", "Hello WebSocket")
     asyncio.run(connect_and_send(uri, message))
