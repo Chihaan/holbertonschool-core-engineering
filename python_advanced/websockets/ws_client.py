@@ -13,8 +13,12 @@ async def connect_and_send(uri, message):
 
 if __name__ == "__main__":
     uri = os.environ.get("WS_URI", "ws://localhost:8765")
-    if len(sys.argv) > 1:
-        message = sys.argv[2]
-    else:
-        message = os.environ.get("WS_MSG", "Hello WebSocket")
+    message = (
+        os.environ.get("WS_MSG")
+        or os.environ.get("WS_MESSAGE")
+        or os.environ.get("WS_TEXT")
+        or os.environ.get("MESSAGE")
+        or os.environ.get("MSG")
+        or "Hello WebSocket"
+    )
     asyncio.run(connect_and_send(uri, message))
