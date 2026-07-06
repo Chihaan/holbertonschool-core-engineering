@@ -8,7 +8,7 @@ async def connect_and_send(uri, message):
     async with websockets.connect(uri) as ws:
         await ws.send(message)
         reponse = await ws.recv()
-        print(reponse)
+        print(reponse, end="")
         return reponse
 
 
