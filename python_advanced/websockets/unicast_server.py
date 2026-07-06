@@ -6,6 +6,7 @@ import websockets
 
 connected = set()
 
+
 async def connection_handler(websocket):
     connected.add(websocket)
     try:
