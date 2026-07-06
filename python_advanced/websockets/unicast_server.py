@@ -4,6 +4,9 @@ import asyncio
 import websockets
 
 
+connected = set()
+
+
 async def connection_handler(websocket):
     try:
         async for message in websocket:

@@ -1,0 +1,21 @@
+from starlette.applications import Starlette
+from starlette.responses import HTMLResponse
+from starlette.routing import Route, WebSocketRoute
+from starlette.websockets import WebSocketDisconnect
+
+async def homepage(request):
+    return HTMLResponse("<h1>WebSocket App</h1>")
+
+async def websocket_endpoint(websocket):
+    await websocket.accept()
+    try:
+        while True:
+            data = await websocket.receive_text()
+            await websocket.send_text(data)
+    except WebSocketDisconnect:
+        pass
+
+app = Starlette(routes=[
+    Route("/", homepage),
+    WebSocketRoute("/ws", websocket_endpoint),
+])
