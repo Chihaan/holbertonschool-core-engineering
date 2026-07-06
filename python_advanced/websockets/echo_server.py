@@ -9,6 +9,7 @@ async def connection_handler(websocket):
         print("reçu:", message)
         await websocket.send(message)
 
+
 async def main():
     async with websockets.serve(connection_handler, "localhost", 8765):
         await asyncio.Future()
