@@ -5,11 +5,14 @@ import websockets
 
 
 async def connection_handler(websocket):
-    async for message in websocket:
-        if message.strip():
-            await websocket.send("OK:", message)
-        else:
-            await websocket.send("ERR:EMPTY")
+    try:
+        async for message in websocket:
+            if message.strip():
+                await websocket.send("OK:", message)
+            else:
+                await websocket.send("ERR:EMPTY")
+    except websockets.ConnectionClosed:
+        pass
 
 
 async def main():
