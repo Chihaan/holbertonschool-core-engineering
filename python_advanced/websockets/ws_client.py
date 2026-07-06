@@ -6,9 +6,9 @@ import websockets
 
 async def main():
     async with websockets.connect("ws://localhost:8765") as ws:
-        await ws.send("Salut serveur")
+        await ws.send("Hello WebSocket")
         reponse = await ws.recv()
-        print("Le serveur dit:", reponse)
+        print(reponse)
 
 
 if __name__ == "__main__":
